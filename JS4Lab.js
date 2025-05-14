@@ -87,7 +87,7 @@ Question 2a: Oh no`)
 console.log(`${friendName} and ${myName} are having ${myDrink} and ${myFood} for lunch!`)
 
 //Question: Read the error message - in your own words - what does it mean?
-//Answer: "Uncaught TypeError: Assignment to constant variable" - This means that a change was attempted to a variable that was initialized as a constant variable. This is not allowed and therefore, it is a type error because const variable types are unchangable.
+//Answer: "Uncaught TypeError: Assignment to constant variable" - This means that a change was attempted to a variable that was declared as a constant variable. This is not allowed and therefore, it is a type error because const variable types are unchangable.
 
 /*---------------------------------- Arrow Functions -------------------------------------*/
 console.log(`-------------------------- 
@@ -106,8 +106,10 @@ Question 3: Arrow Functions`)
  *         console.log(lunchTime('Pizza','Water'))
  * ↓ YOUR CODE HERE ↓ */
 
-const lunchTime = (foodChoice, drinkChoice) => {return `${friendName} and ${myName} are having ${drinkChoice} and ${foodChoice} for lunch!`}
+const lunchTime = (foodChoice, drinkChoice) => `${friendName} and ${myName} are having ${drinkChoice} and ${foodChoice} for lunch!`
 console.log(lunchTime('Pizza','Water'))
+
+// UPDATE: Took out the {return } from the right side of the => (fat arrow) because it is an implied return after the => and we don't need the brackets or the word "return".
 
 //Question: What would your function look like if we were using the old way of creating a function?
 //Answer: 
@@ -129,7 +131,9 @@ Question 4: Callbacks`)
  *
  * ↓ YOUR CODE HERE ↓ */
 
-const foodForTodayAndTomorrow = (tomorrowsFoodChoice, tomorrowsDrinkChoice, callbackFunction) => {return `${callbackFunction} Tomorrow we want ${tomorrowsFoodChoice} and ${tomorrowsDrinkChoice}.`}
+const foodForTodayAndTomorrow = (tomorrowsFoodChoice, tomorrowsDrinkChoice, callbackFunction) => `${callbackFunction} Tomorrow we want ${tomorrowsFoodChoice} and ${tomorrowsDrinkChoice}.`
 console.log(foodForTodayAndTomorrow('margaritas', 'tacos', lunchTime("pizza", "water")));
+
+// UPDATE: Took out the {return } from the right side of the => (fat arrow) because it is an implied return after the => and we don't need the brackets or the word "return".
 
 console.log(`-----------Finished------------`)
